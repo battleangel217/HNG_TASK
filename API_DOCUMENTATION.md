@@ -4,7 +4,7 @@ This document describes the Profile API endpoint implemented in `MyProfile/views
 
 ## Endpoint
 
-- URL: `/api/me/`
+- URL: `/me/`
 - Method: `GET`
 - Description: Returns a small profile object and a cat fact fetched from `https://catfact.ninja/fact`.
 
@@ -51,14 +51,14 @@ The view handles several error conditions when making the external HTTP request:
 Using curl:
 
 ```bash
-curl -s http://127.0.0.1:8000/api/me/
+curl -s https://hngtask-production-1aa2.up.railway.app/me/
 ```
 
 Using Python requests:
 
 ```python
 import requests
-resp = requests.get('http://127.0.0.1:8000/api/me/')
+resp = requests.get('https://hngtask-production-1aa2.up.railway.app/me/')
 print(resp.status_code, resp.json())
 ```
 
